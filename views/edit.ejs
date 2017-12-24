@@ -1,0 +1,131 @@
+<!-- include header -->
+<% include partials/header %>
+   <div class="container-fluid">
+        <div class="container-fluid col-xs-8 col-xs-offset-4 " >    
+    <form class="form-horizontal" method="post" action="/update/<%= doc._id%>">
+      <div> <h3> Forma e regjistrimit te pikave kufitare</h3>    </div>
+ 
+ 
+ 
+      <div class="form-group"> <h3>1</h3><hr>  </div>
+      <div class="form-group">
+        <label class="control-label col-xs-2" for="pika_kufitare"  value="<%= doc.pika_kufitare %>">Pika Kufitare:</label>
+        <div class="col-xs-3">
+            <select class="form-control" id="pika_kufitare" name="pika_kufitare"  value="<%= doc.pika_kufitare %>">
+                <option selected id="default">Zgjedh piken kufitare...</option>
+                 <option id="qafe_e_morines">Qafe e Morines</option>
+               <option id="merdare">Merdare</option>
+               <option id="dheu_i_bardhe">Dheu i bardhe</option>
+               <option id="jarinje">Jarinje</option>
+               <option id="vermice"> Vermice</option>
+               <option id="qafe_e_prushit">Qafe e Prushit</option>
+               <option id="hani_i_elezit"> Hani i Elezit</option>
+               <option id="bernjak"> Bernjak</option>
+               <option id="mucibabe"> Mucibabe</option>
+               <option id="kulle"> Kulle</option>
+               <option id="glloboqice"> Glloboqice</option>
+               <option id="mutivode">Mutivode</option>
+              </select>
+        </div>
+      </div>
+      <div class="form-group"> <h3>2</h3><hr>  </div>
+     
+      <div class="form-group">
+        <h4> Hyrje</h4>
+        <label class="control-label col-xs-2" for="hyrje_min_minuta">Minimum:</label>
+        <div class="col-xs-2">
+          <input type="number" class="form-control" id="hyrje_min_minuta" name="hyrje_min_minuta" value="<%= doc.hyrje_min_minuta %>">
+        </div>
+        <label class="control-label col-xs-offset-0"> Minuta </label>
+      </div>
+ 
+ 
+      <div class="form-group">
+          <label class="control-label col-xs-2" for="hyrje_max_minuta">Maximum:</label>
+          <div class="col-xs-2">
+            <input type="number" class="form-control" id="hyrje_max_minuta" name="hyrje_max_minuta" value="<%= doc.hyrje_max_minuta %>">
+          </div>
+          <label class="control-label col-xs-offset-0"> Minuta </label>
+        </div>
+ 
+     
+     
+      <div class="form-group">
+        <h4> Dalje</h4>
+        <label class="control-label col-xs-2" for="dalje_min_minuta">Minimum:</label>
+        <div class="col-xs-2">
+          <input type="number" class="form-control" id="dalje_min_minuta" name="dalje_min_minuta" value="<%= doc.dalje_min_minuta %>">
+        </div>
+        <label class="control-label col-xs-offset-0"> Minuta </label>
+      </div>
+ 
+ 
+      <div class="form-group">
+          <label class="control-label col-xs-2" for="dalje_max_minuta">Maximum:</label>
+          <div class="col-xs-2">
+            <input type="number" class="form-control" id="dalje_max_minuta" name="dalje_max_minuta" value="<%= doc.dalje_max_minuta %>">
+          </div>
+          <label class="control-label col-xs-offset-0"> Minuta </label>
+        </div>
+ 
+<!-- 3---------------------------------------------------------------- -->
+ 
+        <div class="form-group"> <h3>3</h3><hr>  </div>
+     
+        <div class="form-group">
+          <h4> Hyrje</h4>
+          <label class="control-label col-xs-2" for="hyrje_min_metra">Minimum:</label>
+          <div class="col-xs-2">
+            <input type="number" class="form-control" id="hyrje_min_metra" name="hyrje_min_metra" value="<%=doc.hyrje_min_metra %>">
+          </div>
+          <label class="control-label col-xs-offset-0"> Metra </label>
+        </div>
+ 
+ 
+        <div class="form-group">
+            <label class="control-label col-xs-2" for="hyrje_max_metra">Maximum:</label>
+            <div class="col-xs-2">
+              <input type="number" class="form-control" id="hyrje_max_metra" name="hyrje_max_metra" value="<%=doc.hyrje_max_metra %>">
+            </div>
+            <label class="control-label col-xs-offset-0"> Metra </label>
+          </div>
+ 
+       
+       
+        <div class="form-group">
+          <h4> Dalje</h4>
+          <label class="control-label col-xs-2" for="dalje_min_metra">Minimum:</label>
+          <div class="col-xs-2">
+            <input type="number" class="form-control" id="dalje_min_metra" name="dalje_min_metra" value="<%=doc.dalje_min_metra %>">
+          </div>
+          <label class="control-label col-xs-offset-0"> Metra </label>
+        </div>
+ 
+ 
+        <div class="form-group">
+            <label class="control-label col-xs-2" for="dalje_max_metra">Maximum:</label>
+            <div class="col-xs-2">
+              <input type="number" class="form-control" id="dalje_max_metra" name="dalje_max_metra" value="<%=doc.dalje_max_metra %>" >
+            </div>
+            <label class="control-label col-xs-offset-0"> Metra </label>
+          </div>
+ 
+ 
+ 
+          <div class="form-group">        
+              <div class="col-xs-offset-2 col-xs-12">
+                <button type="submit" class="btn btn-primary" id="btn_dergo">Dergo</button>
+                <button type="submit" class="btn btn-primary" id="btn_fshij">Fshij</button>
+                    </div>
+            </div>
+ 
+    </form>
+ 
+ 
+ 
+ 
+ 
+ 
+  </div>
+ 
+    <% include partials/footer %>
